@@ -4,6 +4,9 @@ Hey! I'm [Balint Kubik](https://www.linkedin.com/in/balintkubik/). Welcome to th
 
 This project implements a sophisticated multi-agent system for **corporate professional development** using [Google Cloud's Agent Development Kit (ADK)](https://google.github.io/adk-docs/). The system demonstrates **automation of complex business processes** through collaborative AI agents with Google ADK.
 
+## Architecture
+![Architecture Diagram](adk_hackathon_prof_dev_agent_architecture.png "Architecture Diagram")
+
 ## Core Components
 
 ### 1. Intent Detection Agent
