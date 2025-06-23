@@ -1,0 +1,32 @@
+email|name|description|skills|date|cost_usd|url
+john.doe@amazincorp.com|Professional Cloud Architect|Google Cloud Professional Cloud Architect Certification|Google Cloud, Architecture, System Design|2024-01-15|299|https://cloud.google.com/certification/cloud-architect
+john.doe@amazincorp.com|Python Mastery Workshop|Advanced Python Programming Workshop|Python, Software Development|2024-02-20|199|https://www.coursera.org/learn/python-mastery
+john.doe@amazincorp.com|Cloud Security Essentials|Google Cloud Security Fundamentals|Google Cloud, Security|2024-03-10|149|https://cloud.google.com/training/security
+johnnie.smith@amazincorp.com|Associate Cloud Engineer|Google Cloud Associate Cloud Engineer Certification|Google Cloud, Cloud Computing|2024-01-20|199|https://cloud.google.com/certification/cloud-engineer
+johnnie.smith@amazincorp.com|Spring Boot Pro|Java Spring Boot Masterclass|Java, Spring Boot, Backend Development|2024-02-25|249|https://www.udemy.com/spring-boot-pro
+jane.doe@amazincorp.com|Vertex AI Fundamentals|Vertex AI and Machine Learning Fundamentals|Vertex AI, Machine Learning, Google Cloud|2024-01-10|299|https://cloud.google.com/vertex-ai/docs/training
+jane.doe@amazincorp.com|ADK Implementation Pro|Google ADK Advanced Implementation|Google ADK, Android Development|2024-02-15|199|https://developer.android.com/training/adk
+sarah.chen@amazincorp.com|BigQuery Data Engineering|BigQuery and Data Engineering Certification|BigQuery, Data Engineering, Google Cloud|2024-01-25|299|https://cloud.google.com/bigquery/docs/training
+sarah.chen@amazincorp.com|Dataflow ETL Mastery|Dataflow and ETL Processing Workshop|Dataflow, ETL, Google Cloud|2024-03-05|199|https://cloud.google.com/dataflow/docs/training
+michael.rodriguez@amazincorp.com|Professional Cloud Architect|Google Cloud Professional Cloud Architect|Google Cloud, Architecture|2024-01-15|299|https://cloud.google.com/certification/cloud-architect
+michael.rodriguez@amazincorp.com|Kubernetes Admin Pro|Kubernetes Administration Certification|Kubernetes, Container Orchestration|2024-02-20|249|https://www.cncf.io/certification/cka
+emily.patel@amazincorp.com|Vertex AI Advanced|Vertex AI and TensorFlow Advanced|Vertex AI, TensorFlow, Machine Learning|2024-01-20|299|https://cloud.google.com/vertex-ai/docs/training/advanced
+emily.patel@amazincorp.com|BigQuery ML|BigQuery for Machine Learning|BigQuery, ML, Data Analysis|2024-03-01|199|https://cloud.google.com/bigquery-ml/docs/training
+david.kim@amazincorp.com|DevOps Engineer Pro|Google Cloud DevOps Engineer Certification|Google Cloud, DevOps, CI/CD|2024-01-30|299|https://cloud.google.com/certification/devops-engineer
+david.kim@amazincorp.com|Kubernetes Admin Advanced|Advanced Kubernetes Administration|Kubernetes, Container Management|2024-02-25|249|https://www.cncf.io/certification/cka
+lisa.thompson@amazincorp.com|Agile PM Professional|Agile Project Management Professional|Agile, Project Management|2024-01-15|299|https://www.pmi.org/certifications/agile
+lisa.thompson@amazincorp.com|Cloud Management Essentials|Google Cloud Fundamentals for Managers|Google Cloud, Cloud Management|2024-03-10|199|https://cloud.google.com/training/cloud-management
+alex.wong@amazincorp.com|BigQuery Data Science|Data Science with BigQuery|BigQuery, Data Science, Python|2024-01-25|299|https://cloud.google.com/bigquery/docs/training/data-science
+alex.wong@amazincorp.com|Vertex AI ML|Machine Learning with Vertex AI|Vertex AI, Machine Learning|2024-02-20|199|https://cloud.google.com/vertex-ai/docs/training/ml
+rachel.martinez@amazincorp.com|Full Stack Cloud Dev|Full Stack Development with Google Cloud|Google Cloud, React, Node.js|2024-01-20|299|https://cloud.google.com/training/fullstack
+rachel.martinez@amazincorp.com|TypeScript Patterns Pro|TypeScript Advanced Patterns|TypeScript, Software Development|2024-03-05|199|https://www.typescript-training.com/advanced
+james.wilson@amazincorp.com|Engineering Leadership Pro|Engineering Leadership Workshop|Leadership, Management|2024-01-30|299|https://www.engineering-leadership.com/training
+james.wilson@amazincorp.com|Cloud Technical Leadership|Google Cloud for Technical Leaders|Google Cloud, Architecture|2024-02-25|249|https://cloud.google.com/training/technical-leaders
+priya.sharma@amazincorp.com|AI Research Methods|Advanced AI Research Methods|AI Research, Machine Learning|2024-01-15|299|https://cloud.google.com/ai-platform/docs/research
+priya.sharma@amazincorp.com|Vertex AI Research|Vertex AI Research Implementation|Vertex AI, Research, Google Cloud|2024-03-01|199|https://cloud.google.com/vertex-ai/docs/research
+daniel.lee@amazincorp.com|BigQuery Warehouse Design|BigQuery Data Warehouse Design|BigQuery, Data Warehousing|2024-01-25|299|https://cloud.google.com/bigquery/docs/warehouse-design
+daniel.lee@amazincorp.com|Dataform dbt Pro|Dataform and dbt Masterclass|Dataform, dbt, Data Engineering|2024-02-20|199|https://cloud.google.com/dataform/docs/training
+sophia.anderson@amazincorp.com|Spring Boot Microservices|Java Spring Boot Microservices|Java, Spring Boot, Microservices|2024-01-20|299|https://spring.io/training/microservices
+sophia.anderson@amazincorp.com|Cloud Backend Dev|Google Cloud for Backend Developers|Google Cloud, Backend Development|2024-03-05|199|https://cloud.google.com/training/backend
+robert.taylor@amazincorp.com|Product Strategy Pro|Product Strategy and Management|Product Management, Strategy|2024-01-30|299|https://www.productstrategy.com/training
+robert.taylor@amazincorp.com|Data Analytics for PMs|Data Analytics for Product Managers|Data Analytics, Product Management|2024-02-25|249|https://cloud.google.com/training/product-analytics 

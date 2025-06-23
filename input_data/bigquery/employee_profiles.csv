@@ -1,0 +1,16 @@
+name|email|department|role|skills
+John Doe|john.doe@amazincorp.com|IT|Senior Software Engineer|SQL, Python, Java, Google Cloud
+Johnnie Smith|johnnie.smith@amazincorp.com|IT|Junior Software Engineer|SQL, Java, Google Cloud, AWS
+Jane Doe|jane.doe@amazincorp.com|Data|AI Engineer|SQL, Python, Vertex AI, Google ADK, Google Cloud
+Sarah Chen|sarah.chen@amazincorp.com|Data|Data Engineer|Python, BigQuery, Dataflow, dbt, Looker, Google Cloud
+Michael Rodriguez|michael.rodriguez@amazincorp.com|Engineering|Cloud Architect|Google Cloud, Kubernetes, Terraform, Python, Java
+Emily Patel|emily.patel@amazincorp.com|AI|ML Engineer|Python, TensorFlow, Vertex AI, BigQuery, Google Cloud
+David Kim|david.kim@amazincorp.com|Engineering|DevOps Engineer|Google Cloud, Kubernetes, Docker, Python, CI/CD
+Lisa Thompson|lisa.thompson@amazincorp.com|Management|Technical Project Manager|Agile, JIRA, Google Cloud, Project Management
+Alex Wong|alex.wong@amazincorp.com|Data|Data Scientist|Python, R, BigQuery, Vertex AI, Machine Learning
+Rachel Martinez|rachel.martinez@amazincorp.com|Engineering|Full Stack Developer|React, Node.js, Google Cloud, TypeScript, Python
+James Wilson|james.wilson@amazincorp.com|Management|Engineering Manager|Leadership, Google Cloud, Python, System Design
+Priya Sharma|priya.sharma@amazincorp.com|AI|AI Research Engineer|Python, TensorFlow, Vertex AI, Research, Google Cloud
+Daniel Lee|daniel.lee@amazincorp.com|Data|Data Warehouse Engineer|BigQuery, Dataform, dbt, SQL, Google Cloud
+Sophia Anderson|sophia.anderson@amazincorp.com|Engineering|Backend Developer|Java, Spring Boot, Google Cloud, Microservices
+Robert Taylor|robert.taylor@amazincorp.com|Management|Product Manager|Product Strategy, Google Cloud, Data Analytics, Agile
