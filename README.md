@@ -1,4 +1,6 @@
-# Google ADK Hackathon Corporate Professional Development Agent
+# Google ADK Hackathon Corporate Professional Development Agent #adkhackathon
+
+Hey! I'm [Balint Kubik](https://www.linkedin.com/in/balintkubik/). Welcome to the GitHub repository of my submission to the [Agent Development Kit Hackathon with Google Cloud](https://googlecloudmultiagents.devpost.com/)!
 
 This project implements a sophisticated multi-agent system for **corporate professional development** using [Google Cloud's Agent Development Kit (ADK)](https://google.github.io/adk-docs/). The system demonstrates **automation of complex business processes** through collaborative AI agents with Google ADK.
 
