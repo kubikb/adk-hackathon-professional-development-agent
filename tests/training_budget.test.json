@@ -1,0 +1,50 @@
+{
+    "eval_set_id": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "name": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "description": null,
+    "eval_cases": [
+        {
+            "eval_id": "/tests/training_budget.test.json",
+            "conversation": [
+                {
+                    "invocation_id": "1c2e8003-d19c-4912-b0ae-17b9d568f8fb",
+                    "user_content": {
+                        "parts": [
+                            {
+                                "text": "How much training budget do I have left? My email is priya.sharma@amazincorp.com"
+                            }
+                        ],
+                        "role": "user"
+                    },
+                    "final_response": {
+                        "parts": [
+                            {
+                                "text": "Priya, your remaining training budget is $3002.0."
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "transfer_to_agent",
+                                "args": {
+                                    "agent_name": "EmployeeTrainingHistoryAndRemainingTrainingBudgetAgent"
+                                }
+                            }
+                        ],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1747339378.484014
+                }
+            ],
+            "session_input": {
+                "app_name": "adk_hackathon_professional_development_agent",
+                "user_id": "test_user",
+                "state": {}
+            },
+            "creation_timestamp": 1747339378.484044
+        }
+    ],
+    "creation_timestamp": 1747339378.484056
+}

@@ -1,4 +1,4 @@
-# Google ADK Hackathon Corporate Professional Development Agent #adkhackathon
+# Agent Development Kit (ADK) Hackathon Corporate Professional Development Agent #adkhackathon
 
 Hey! I'm [Balint Kubik](https://www.linkedin.com/in/balintkubik/). Welcome to the GitHub repository of my submission to the [Agent Development Kit Hackathon with Google Cloud](https://googlecloudmultiagents.devpost.com/)!
 
@@ -84,6 +84,16 @@ This implementation aligns with the hackathon's focus on building multi-agent sy
 
 ### Prerequisites
 
+#### Pass environment variables
+Make sure to customize the contents of [`adk_hackathon_professional_development_agent/.env`](adk_hackathon_professional_development_agent/.env) so that the application will use the correct environment variables.
+
+You can also set the environment variables in your local session by running:
+```bash
+set -a                                                    
+source adk_hackathon_professional_development_agent/.env
+set +a
+```
+
 #### Install Python dependencies
 
 ##### Install Poetry
@@ -113,7 +123,12 @@ gcloud auth application-default login
 
 Set the default project using:
 ```bash
-gcloud config set project {PROJECT_ID}
+gcloud config set project $GOOGLE_CLOUD_PROJECT
+```
+
+Set the default quota project using:
+```bash
+gcloud auth application-default set-quota-project $GOOGLE_CLOUD_PROJECT
 ```
 
 ### Enable necessary Google Cloud APIs
@@ -134,9 +149,8 @@ Since multiple agents use [Google BigQuery](https://cloud.google.com/bigquery?hl
 First, we need to create the Google BigQuery dataset.
 
 ```bash
-bq --location={LOCATION} mk \
-    --dataset
-    {PROJECT_ID}:{DATASET_ID}
+bq --location=$GOOGLE_CLOUD_LOCATION mk \
+    --dataset $GOOGLE_CLOUD_PROJECT:$BIGQUERY_DATASET_ID
 ```
 
 ##### Load input data
@@ -147,7 +161,7 @@ bq load \
     --source_format=CSV \
     --field_delimiter='|' \
     --skip_leading_rows=1 \
-    {PROJECT_ID}:{DATASET_ID}.employee_profiles \
+    $GOOGLE_CLOUD_PROJECT:$BIGQUERY_DATASET_ID.employee_profiles \
     input_data/bigquery/employee_profiles.csv \
     name:STRING,email:STRING,department:STRING,role:STRING,skills:STRING
 
@@ -155,7 +169,7 @@ bq load \
     --source_format=CSV \
     --field_delimiter='|' \
     --skip_leading_rows=1 \
-    {PROJECT_ID}:{DATASET_ID}.employee_trainings \
+    $GOOGLE_CLOUD_PROJECT:$BIGQUERY_DATASET_ID.employee_trainings \
     input_data/bigquery/employee_trainings.csv \
     email:STRING,name:STRING,description:STRING,skills:STRING,date:DATE,cost_usd:FLOAT,url:STRING
 
@@ -163,7 +177,7 @@ bq load \
     --source_format=CSV \
     --field_delimiter='|' \
     --skip_leading_rows=1 \
-    {PROJECT_ID}:{DATASET_ID}.project_portfolio \
+    $GOOGLE_CLOUD_PROJECT:$BIGQUERY_DATASET_ID.project_portfolio \
     input_data/bigquery/project_portfolio.csv \
     name:STRING,customer:STRING,customer_profile:STRING,customer_location:STRING,description:STRING,skills_needed:STRING,status:STRING
 ```
@@ -175,12 +189,12 @@ bq load \
 
 ##### Create bucket
 ```bash
-gcloud storage buckets create gs://{BUCKET_NAME} --location={BUCKET_LOCATION}
+gcloud storage buckets create gs://$VERTEX_AI_SEARCH_DATA_STORE_BUCKET --location=$GOOGLE_CLOUD_LOCATION
 ```
 
 ##### Upload files
 ```bash
-gsutil -m cp -r input_data/vertex_ai_search/** gs://{BUCKET_NAME}/
+gsutil -m cp -r input_data/vertex_ai_search/** gs://$VERTEX_AI_SEARCH_DATA_STORE_BUCKET/
 ```
 
 #### Vertex AI Search data store
@@ -191,8 +205,15 @@ As mentioned before, the PDFs uploaded to GCS will be used by the agents using a
 Run the below script to create the data store and load the GCS files.
 
 ```bash
-poetry run python google_adk_professional_development_agent/create_vertex_ai_search_data_store.py
+poetry run python adk_hackathon_professional_development_agent/create_vertex_ai_search_data_store.py
 ```
+
+#### Run it
+```bash
+poetry run adk web
+```
+
+Navigate to `localhost:8000`.
 
 ## Testing
 
@@ -223,21 +244,6 @@ The test suite covers key user interactions:
 ### Deploy to Cloud Run
 The agent can be deployed to [Cloud Run](https://cloud.google.com/run?hl=en), a fully managed platform of Google Cloud that enables you to run your code directly on top of Google's scalable infrastructure.
 
-Set the below environment variables:
-
-```bash
-export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-
-# Set your desired Google Cloud Location
-export GOOGLE_CLOUD_LOCATION="us-central1" # Example location
-
-# Set the path to your agent code directory
-export AGENT_PATH="./google_adk_professional_development_agent" # Assuming capital_agent is in the current directory
-
-# Set a name for your Cloud Run service (optional)
-export SERVICE_NAME="google-adk-professional-development-agent"
-```
-
 Run the below command:
 ```bash
 gcloud run deploy $SERVICE_NAME \
@@ -247,7 +253,7 @@ gcloud run deploy $SERVICE_NAME \
    --allow-unauthenticated \
    --max-instances 1 \
    --cpu 4 \
-   --memory 4Gi \
+   --memory 8Gi \
    --set-env-vars="GOOGLE_CLOUD_PROJECT=$GOOGLE_CLOUD_PROJECT,GOOGLE_CLOUD_LOCATION=$GOOGLE_CLOUD_LOCATION,GOOGLE_GENAI_USE_VERTEXAI=$GOOGLE_GENAI_USE_VERTEXAI,BIGQUERY_DATASET_ID=$BIGQUERY_DATASET_ID,VERTEX_AI_SEARCH_DATA_STORE_LOCATION=$VERTEX_AI_SEARCH_DATA_STORE_LOCATION,VERTEX_AI_SEARCH_DATA_STORE_BUCKET=$VERTEX_AI_SEARCH_DATA_STORE_BUCKET,VERTEX_AI_SEARCH_DATA_STORE_ID=$VERTEX_AI_SEARCH_DATA_STORE_ID,VERTEX_AI_STAGING_BUCKET=$VERTEX_AI_STAGING_BUCKET"
 ```
 
@@ -255,9 +261,9 @@ gcloud run deploy $SERVICE_NAME \
 We can deploy the agent to [Vertex AI Agent Engine](https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview), a set of services in Google Cloud that enables developers to deploy, manage, and scale AI agents in production.
 
 #### Create Google Cloud Storage staging bucket
-gcloud storage buckets create gs://{BUCKET_NAME} --location={BUCKET_LOCATION}
+gcloud storage buckets create gs://$VERTEX_AI_SEARCH_DATA_STORE_BUCKET --location=$GOOGLE_CLOUD_LOCATION
 
 #### Run the deployment script
 ```bash
-poetry run python google_adk_professional_development_agent/deploy_to_vertex_ai_agent_engine.py
+poetry run python adk_hackathon_professional_development_agent/deploy_to_vertex_ai_agent_engine.py
 ```

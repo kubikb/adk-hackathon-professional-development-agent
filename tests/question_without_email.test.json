@@ -1,0 +1,50 @@
+{
+    "eval_set_id": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "name": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "description": null,
+    "eval_cases": [
+        {
+            "eval_id": "/tests/question_without_email.test.json",
+            "conversation": [
+                {
+                    "invocation_id": "1c2e8003-d19c-4912-b0ae-17b9d568f8fb",
+                    "user_content": {
+                        "parts": [
+                            {
+                                "text": "What skills should I learn to serve our existing and future customers better?"
+                            }
+                        ],
+                        "role": "user"
+                    },
+                    "final_response": {
+                        "parts": [
+                            {
+                                "text": "To provide you with the best recommendations, I need a bit more information. Could you please provide your email address so I can access your employee profile, current skills, and role within the company? Also, are there any specific company goals or initiatives you're aware of that might influence the skills that would be most beneficial to develop?"
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "transfer_to_agent",
+                                "args": {
+                                    "agent_name": "CurrentOrFutureSkillsDevelopmentAgent"
+                                }
+                            }
+                        ],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1747339378.484014
+                }
+            ],
+            "session_input": {
+                "app_name": "adk_hackathon_professional_development_agent",
+                "user_id": "test_user",
+                "state": {}
+            },
+            "creation_timestamp": 1747339378.484044
+        }
+    ],
+    "creation_timestamp": 1747339378.484056
+}

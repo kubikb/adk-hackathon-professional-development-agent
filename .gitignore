@@ -22,7 +22,6 @@ wheels/
 MANIFEST
 
 # Virtual Environment
-.env
 .venv
 env/
 venv/
@@ -67,7 +66,6 @@ wheels/
 *.egg
 
 # Google Cloud
-*.json
 !package.json
 !poetry.lock
 *.log

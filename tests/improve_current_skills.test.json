@@ -1,0 +1,59 @@
+{
+    "eval_set_id": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "name": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "description": null,
+    "eval_cases": [
+        {
+            "eval_id": "/tests/improve_current_skills.test.json",
+            "conversation": [
+                {
+                    "invocation_id": "1c2e8003-d19c-4912-b0ae-17b9d568f8fb",
+                    "user_content": {
+                        "parts": [
+                            {
+                                "text": "How can I improve my current skills? My email is: priya.sharma@amazincorp.com"
+                            }
+                        ],
+                        "role": "user"
+                    },
+                    "final_response": {
+                        "parts": [
+                            {
+                                "text": "Okay, I have gathered the necessary information. Based on your profile, you are an AI Research Engineer in the AI department with skills in Python, TensorFlow, Vertex AI, Research, and Google Cloud.\n\nConsidering the company's focus on cloud technologies, particularly Google Cloud Platform (GCP), and the skills needed in current projects, here are my recommendations:\n\n1. Expand your GCP Expertise:\n\nFocus: Given your existing Google Cloud skills, deepening your expertise in specific GCP services is a great path. Look into Dataflow for ETL pipelines, Cloud Run for microservices, and Cloud Storage for data lake implementations.\nRationale: Many projects, such as the 'E-commerce Platform Upgrade' and 'Data Center Modernization,' require these skills.\n2. Enhance your Data Engineering Skills:\n\nFocus: The 'Enterprise Data Warehouse Migration' and several other projects emphasize BigQuery, Dataform, and Looker. Learning dbt, a popular data transformation tool, could also be beneficial.\nRationale: Your current skills in TensorFlow and Vertex AI are valuable, but expanding into data engineering will make you a more versatile asset to the team.\n3. Strengthen your Security Skills:\n\nFocus: Projects like the 'Cybersecurity Assessment Tool' and the 'Healthcare Data Platform' highlight the importance of security in the cloud. Consider learning more about Google Cloud Security Command Center, Cloud Identity, and Cloud KMS.\nRationale: As AI becomes more integrated into sensitive areas, security expertise becomes increasingly crucial.\n4. Explore DevOps and Automation:\n\nFocus: The company values DevOps skills. Look into tools like Ansible for infrastructure automation, as seen in the 'Data Center Modernization' project.\nRationale: Automation is key to efficiency in cloud environments.\nTraining Opportunities:\n\nGiven your $3,500 annual professional development allowance and the $500 certification bonus, consider these training options:\n\nOnline Learning Platforms: A Cloud Guru, Coursera, Pluralsight, and Udacity offer courses on GCP, data engineering, security, and DevOps.\nGoogle Cloud Certifications: Aim for certifications in areas like Data Engineering, Security, or Cloud Architecture. The company offers a $500 bonus and reimbursement for the exam fee upon completion.\nConferences and Seminars: Attend Google Cloud Next or KubeCon to stay up-to-date with the latest trends and technologies.\nWould you like me to find some training opportunities based on the recommendations above?"
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "transfer_to_agent",
+                                "args": {
+                                    "agent_name": "CurrentOrFutureSkillsDevelopmentAgent"
+                                }
+                            }
+                        ],
+                        "intermediate_responses": [
+                            [
+                                "CurrentOrFutureSkillsDevelopmentAgent",
+                                [
+                                    {
+                                        "text": "Okay, I can help you with that. To provide the best recommendations, I need to gather some information first. I will:\n\nGet your employee profile: This will give me your current skills, department, and role.\nGet company information: This will provide context about company goals and any skills the company is focusing on.\nGet the project portfolio: This will help identify in-demand skills based on current and upcoming projects.\nGet the employee professional development company policy: This will make sure any recommendations align with the company policy.\nOnce I have this information, I'll be able to suggest specific skills you could focus on and potential training opportunities."
+                                    }
+                                ]
+                            ]
+                        ]
+                    },
+                    "creation_timestamp": 1747339378.484014
+                }
+            ],
+            "session_input": {
+                "app_name": "adk_hackathon_professional_development_agent",
+                "user_id": "test_user",
+                "state": {}
+            },
+            "creation_timestamp": 1747339378.484044
+        }
+    ],
+    "creation_timestamp": 1747339378.484056
+}

@@ -42,8 +42,8 @@ import vertexai
 from vertexai import agent_engines
 from vertexai.preview import reasoning_engines
 
-from google_adk_professional_development_agent.config import Config
-from google_adk_professional_development_agent.agents.intent_detection_agent import (
+from adk_hackathon_professional_development_agent.config import Config
+from adk_hackathon_professional_development_agent.agents.intent_detection_agent import (
     intent_detection_agent,
 )
 

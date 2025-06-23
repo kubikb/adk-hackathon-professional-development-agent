@@ -33,7 +33,7 @@ training_finder_agent = LlmAgent(
     instruction=(
         "You are a helpful agent who can find training opportunities for employees based on their current skills, company profile, and project portfolio. "
         "Use the 'google_search' tool to search the internet for training opportunities that align with the employee's current skills, desired future skills, and company profile. "
-        "Make sure to display the training's name, description, skills, date when it can be started, cost in USD, and URL. "
+        "Make sure to return the training's name, description, skills, date when it can be started, cost in USD, and URL in a structured format. "
     ),
     tools=[
         google_search,

@@ -1,0 +1,56 @@
+{
+    "eval_set_id": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "name": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "description": null,
+    "eval_cases": [
+        {
+            "eval_id": "/tests/professional_development_policy_question.test.json",
+            "conversation": [
+                {
+                    "invocation_id": "1c2e8003-d19c-4912-b0ae-17b9d568f8fb",
+                    "user_content": {
+                        "parts": [
+                            {
+                                "text": "I am interested in learning Spanish as foreign language. Does our corporate professional development policy allow for that?"
+                            }
+                        ],
+                        "role": "user"
+                    },
+                    "final_response": {
+                        "parts": [
+                            {
+                                "text": "Based on the company's professional development policy, it supports holistic development, including technical skills, consulting, communication, leadership, and business acumen. While it doesn't specifically mention foreign language learning, the policy is designed to align training with strategic goals, project needs, and career aspirations. Therefore, learning Spanish could be covered if you can justify how it aligns with your role, project needs, or career development within the company, especially in relation to the company's business objectives. You should discuss this with your manager and explain how learning Spanish will benefit your work and the company. If approved, the annual professional development allowance of $3,500 USD could be used for this purpose."
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "transfer_to_agent",
+                                "args": {
+                                    "agent_name": "ProfessionalDevelopmentPolicyAgent"
+                                }
+                            },
+                            {
+                                "name": "CompanyInformationAgent",
+                                "args": {
+                                    "request": "employee professional development company policy"
+                                }
+                            }
+                        ],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1747339378.484014
+                }
+            ],
+            "session_input": {
+                "app_name": "adk_hackathon_professional_development_agent",
+                "user_id": "test_user",
+                "state": {}
+            },
+            "creation_timestamp": 1747339378.484044
+        }
+    ],
+    "creation_timestamp": 1747339378.484056
+}

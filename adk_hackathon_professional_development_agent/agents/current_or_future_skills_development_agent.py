@@ -49,7 +49,7 @@ current_or_future_skills_development_agent = LlmAgent(
         "Get the company information by calling the 'company_information_tool' tool. "
         "Get the project portfolio by calling the 'get_project_portfolio_tool' tool. "
         "Get the employee professional development company policy by calling the 'company_information_tool' tool. Make sure your recommendations align with the company policy. "
-        "If the user would like to find training opportunities, call the 'training_finder_tool' tool to find training opportunities. "
+        "If the user would like to find training opportunities, call the 'training_finder_tool' tool to find training opportunities. Make sure to display the training's name, description, skills, date when it can be started, cost in USD, and URL in a structured format to the user for all training opportunities even if the training_finder_tool already returned them."
     ),
     output_key="current_skills_development_needs",
     tools=[

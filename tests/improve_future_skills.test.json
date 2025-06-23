@@ -1,0 +1,59 @@
+{
+    "eval_set_id": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "name": "189d6856-9b90-4b9c-bda8-7cec899507ae",
+    "description": null,
+    "eval_cases": [
+        {
+            "eval_id": "/tests/improve_future_skills.test.json",
+            "conversation": [
+                {
+                    "invocation_id": "1c2e8003-d19c-4912-b0ae-17b9d568f8fb",
+                    "user_content": {
+                        "parts": [
+                            {
+                                "text": "What skills should I learn to serve our existing and future customers better? My email is priya.sharma@amazincorp.com"
+                            }
+                        ],
+                        "role": "user"
+                    },
+                    "final_response": {
+                        "parts": [
+                            {
+                                "text": "Okay, I've gathered the necessary information. Let's analyze your current skills, company goals, and project portfolio to determine the skills you should learn.\n\nYour Current Skills:\n\nPython\nTensorFlow\nVertex AI\nResearch\nGoogle Cloud\nCompany Goals:\n\nExpanding expertise and service offerings within the Google Cloud Platform.\nDriving innovation through data and AI/ML solutions.\nBuilding strong, lasting client relationships.\nMaintaining a culture of continuous learning and development.\nProject Portfolio:\n\nThe project portfolio reveals a strong focus on:\n\nData warehousing and business intelligence (BigQuery, Dataform, Looker, dbt)\nIoT and real-time analytics (Cloud IoT Core, Cloud Pub/Sub)\nAI-powered solutions (Vertex AI)\nModern application development (Firebase, Cloud Run, React Native)\nSecurity (Google Cloud Security Command Center, Cloud KMS, Healthcare API)\nBlockchain (Google Cloud Blockchain)\nSkills to Develop:\n\nBased on this analysis, and aligning with the company's professional development policy, I recommend focusing on the following areas:\n\nData Engineering & Analytics:\nDataform and dbt: The 'Enterprise Data Warehouse Migration' project highlights these tools. They are essential for modern data transformation and workflow management.\nLooker: Several projects ('Enterprise Data Warehouse Migration', 'E-commerce Platform Upgrade') utilize Looker for business intelligence and data visualization.\nCloud-Native Application Development:\nCloud Run: Used across various projects ('Mobile App Development Platform', 'E-commerce Platform Upgrade', 'Healthcare Data Platform', 'Data Center Modernization', 'Blockchain Supply Chain Solution'), Cloud Run is crucial for deploying and scaling containerized applications.\nFirebase: The 'Mobile App Development Platform' project uses Firebase for rapid mobile app development.\nReact Native, TypeScript, Node.js: These technologies are in demand, especially for projects like the 'Mobile App Development Platform.'\nSecurity:\nGoogle Cloud Security Command Center and Cloud KMS: Given the increasing importance of security, especially in projects like 'Cybersecurity Assessment Tool' and 'Digital Banking Transformation,' skills in these areas are valuable.\nGoogle Cloud Healthcare API: For healthcare-related projects like the 'Healthcare Data Platform,' understanding this API and HIPAA compliance is critical.\nEmerging Technologies:\nGoogle Cloud Blockchain: The 'Blockchain Supply Chain Solution' project indicates a move towards blockchain-based solutions.\nSoft Skills\nConsulting and Communication: As highlighted in the company's professional development policy, these skills are crucial for building strong client relationships.\nI suggest prioritizing these skills based on your interests and career goals. Since you have a strong foundation in Python, TensorFlow, and Vertex AI, expanding your knowledge in areas like Dataform, Looker, and Cloud Run would be a natural progression.\n\nWould you like me to find some training opportunities for these skills?"
+                            }
+                        ],
+                        "role": "model"
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "transfer_to_agent",
+                                "args": {
+                                    "agent_name": "CurrentOrFutureSkillsDevelopmentAgent"
+                                }
+                            }
+                        ],
+                        "intermediate_responses": [
+                            [
+                                "CurrentOrFutureSkillsDevelopmentAgent",
+                                [
+                                    {
+                                        "text": "Okay, I can help you with that. First, I need to gather some information about you, our company, and our projects. I'll start by getting your employee profile using your email address, then I'll retrieve company information and the project portfolio. After that, I'll analyze the data to identify potential skill gaps and recommend skills for you to learn."
+                                    }
+                                ]
+                            ]
+                        ]
+                    },
+                    "creation_timestamp": 1747339378.484014
+                }
+            ],
+            "session_input": {
+                "app_name": "adk_hackathon_professional_development_agent",
+                "user_id": "test_user",
+                "state": {}
+            },
+            "creation_timestamp": 1747339378.484044
+        }
+    ],
+    "creation_timestamp": 1747339378.484056
+}
